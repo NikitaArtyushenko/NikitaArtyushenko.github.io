@@ -5,30 +5,91 @@
   <head>
     <title>Моя работа №1</title>
     <style>
-      foot{
-        margin-top: 1000px;
+      .foot{
+        margin-top: 2000px;
+      }
+      ol {
+        list-style: none;
+        counter-reset: li;
+      }
+      li:before {
+        counter-increment: li;
+        content: counters(li, ".") ". ";
       }
     </style>
   </head>
 
   <body>
 
-    <h1>Работу выполнил Артюшенко Никита Игоревич</h1>
+    <h1 id="start">Работу выполнил Артюшенко Никита Игоревич</h1>
 
     <h2>Нумерованный список</h2>
 
     <ol>
-      <li><a href = http://www.example.com> Ссылка на страницу exammple.com <a></li>
-      <li><a href = https://www.example.com> Ссылка на страницу exammple.com в https <a></li>
-      <li><a href = ftp://@artushenko.nik@mail.ru>Ссылка на файл FTP сервера без авторизации</a></li>
-      <li><a href = ftp://MyUser:MyPassword@artushenko.nik@mail.ru>Ссылка на файл FTP сервера с авторизацией</a></li>
-      <li><a href="https://kubsu.ru#section-footer">Перейти к нижней части сайта kubsu.ru</a> </li>
-      <li><a href="index.html#footer">Перейти к нижней части текущей страницы</a> </li>
+      <li><a href="http://www.example.com" target="_blank">Ссылка на страницу exammple.com <a></li>
+      <li><a href="https://www.example.com" target="_blank">Ссылка на страницу exammple.com в https <a></li>
+      <li><a href="ftp://@artushenko.nik@mail.ru">Ссылка на файл FTP сервера без авторизации</a></li>
+      <li><a href="ftp://MyUser:MyPassword@artushenko.nik@mail.ru">Ссылка на файл FTP сервера с авторизацией</a></li>
+      <li><a href="https://html5book.ru/css-shrifty/#comments" target="_blank">Перейти к нижней части сайта html5book.ru</a> </li>
+      <li><a href="#footer">Ссылка на фрагмент текущей страницы</a></li>
+      <li><a href="https://ru.defactofashion.com/man-shackets?filter=gender:man;category:coat;price:2001-5000" target="_blank">Cсылка c несколькими параметрами url</a></li>
+      <li>Список ссылок навигации:<ol>
+        <li><a href="#forms" title="Формы">Перейти к формам</a></li>
+        <li><a href="#start" title="Верхушка страницы">Вернуться наверх</a></li>
+      </ol></li>
+      <li><a name="hrefless">Ссылка без href</a></li>
+      <li><a href="" name="hrefempty">Ссылка с пустым href</a></li>
+      <li><a href="http://primer.ru" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
     </ol>
    
-        <div name = fotter class = foot> Ссылка ведёт сюда! </div>
+        <div class = foot><a name="footer">Ссылка ведёт сюда!</a></div>
+
+    <div id="forms">
+        <form action="/" method="POST">
+        
+            <label>
+                Имя:<br />
+                <input name="field-name" placeholder="Ваше имя" />
+            </label><br />
+        
+            <label>
+                Еmail:<br />
+                <input name="field-email" type="email" placeholder="Введите вашу почту" />
+            </label><br />
+        
+            <label>
+                Дата рождения:<br />
+                <input name="field-date" value="2000-01-01" type="date" />
+            </label><br />
+
+            Количество конечностей:<br />
+            <label><input type="radio" checked="checked" name="radio-group" value="Значение1" />4 конечности</label><br />
+            <label><input type="radio" name="radio-group" value="Значение2" />3 конечности</label><br />
+            <label><input type="radio" name="radio-group" value="Значение3" />2 конечности</label><br />
+            <label><input type="radio" name="radio-group" value="Значение4" />1 конечность</label><br />
+            <label><input type="radio" name="radio-group" value="Значение5" />Нет конечностей</label><br />
+
+            <label>
+                Сверхспособности:<br />
+                <select name="field-name" multiple="multiple">
+                  <option value="Бессмертие"  selected="selected">Бессмертие</option>
+                  <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
+                  <option value="Левитация">Левитация</option>
+                </select>
+            </label><br />
+
+            <label>
+              Биография:<br />
+              <textarea name="field-name" cols="100" rows="20" placeholder="Напишите вашу биографию"></textarea>
+            </label><br />
+
+            <label><input type="checkbox" checked="checked" name="check" />
+              С контрактом ознакомлен(а)</label><br />
+
+              <input type="submit" value="Отправить" />
+         </form>
+    </div>
 
   </body>
 
 </html>
- 
