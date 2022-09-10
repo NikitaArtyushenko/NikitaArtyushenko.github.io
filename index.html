@@ -3,6 +3,7 @@
 <html lang="ru">
 
   <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Моя работа №1</title>
     <style>
       .foot{
@@ -15,6 +16,12 @@
       li:before {
         counter-increment: li;
         content: counters(li, ".") ". ";
+      }
+     /* #sh{
+        padding-left: 50px;
+      }*/
+      map{
+        display: inline;
       }
     </style>
   </head>
@@ -37,9 +44,23 @@
         <li><a href="#forms" title="Формы">Перейти к формам</a></li>
         <li><a href="#start" title="Верхушка страницы">Вернуться наверх</a></li>
       </ol></li>
-      <li><a name="hrefless">Ссылка без href</a></li>
+      <li><a name="hrefless">https://www.example.com (Ссылка без href)</a></li>
       <li><a href="" name="hrefempty">Ссылка с пустым href</a></li>
-      <li><a href="http://primer.ru" rel="nofollow">Ссылка, по которой запрещен переход поисковикам</a></li>
+      <li><a href="http://ya.ru" rel="nofollow" target="_blank">Ссылка, по которой запрещен переход поисковикам</a></li>
+      <li><a href="https://www.example.com" rel="noindex" target="_blank">Ссылка, которая не индексируется браузером</a></li>
+      <li>Контекстная <a href="https://www.example.com" target="_blank">ссылка</a></li>
+      <li><a href="https://www.example.com" target="_blank"><img src="image.jpg" height="150" alt="Ссылка изображение"></a></li>
+      <li><img src="shapes.JPG" usemap="#shapes" height="100" alt="Изображение">
+        <map name="shapes">
+          <area shape="rect" coords="0,0,100,100" href="https://www.example1.com" alt="Квадрат">
+          <area shape="circle" coords="150,50,50" href="https://www.example2.com" alt="Круг" id="sh">
+        </map></li>
+      <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+      <li><a href="about/page1.html">Относительная ссылка на страницу в каталоге about</a></li>
+      <li><a href="../page2.html">Относительная ссылка на страницу в каталоге уровнем выше</a></li>
+      <li><a href="../../page3.html">Относительная ссылка на страницу в каталоге, расположенном на два уровня выше</a></li>
+      <li><a href="/main.html">Сокращённая ссылка на главную страницу текущего сайта</a></li>
+      <li><a href="/">КубГУ</a> </li>
     </ol>
    
         <div class = foot><a name="footer">Ссылка ведёт сюда!</a></div>
