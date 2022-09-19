@@ -82,7 +82,7 @@ body{margin: 0; text-align: center; padding: 0px;}
     max-width:960px; 
     max-height: 1000px;
     overflow-y: scroll;
-    background-color:rgb(232, 252, 250); 
+    background:rgb(232, 252, 250); 
     margin: 0 auto; 
     margin-top:20px; 
     padding:10px;
