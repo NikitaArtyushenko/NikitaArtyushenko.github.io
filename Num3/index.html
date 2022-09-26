@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+
+<html lang="ru">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Моя работа №1</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+
+    <div id="header">
+      <img src="image.png" id="logo" alt="Логотип">
+      <div id="HText">
+      <p>Мой сайт</p>  
+      </div>
+    </div>
+
+    <div id="nav">
+      <div class="elem"><a href="#TB" class="menu">Ссылка на таблицу</a></div>
+      <div class="elem"><a href="#forms" class="menu">Ссылка на формы</a></div>
+      <div class="elem"><a href="#links" class="menu">Ссылка на список</a></div>
+    </div>
+
+    <div class="content">
+    <h1 id="start">Работу выполнил Артюшенко Никита Игоревич</h1>
+    <h2>Нумерованный список</h2>
+    <ol>
+      <li><a href="http://www.example.com" target="_blank">Ссылка на страницу exammple.com <a></li>
+      <li><a href="https://www.example.com" target="_blank">Ссылка на страницу exammple.com в https <a></li>
+      <li><a href="ftp://@artushenko.nik@mail.ru">Ссылка на файл FTP сервера без авторизации</a></li>
+      <li><a href="ftp://MyUser:MyPassword@artushenko.nik@mail.ru">Ссылка на файл FTP сервера с авторизацией</a></li>
+      <li><a href="https://html5book.ru/css-shrifty/#comments" target="_blank">Перейти к нижней части сайта html5book.ru</a> </li>
+      <li><a href="#header">Ссылка на фрагмент текущей страницы (header)</a></li>
+      <li><a href="https://ru.defactofashion.com/man-shackets?filter=gender:man;category:coat;price:2001-5000" target="_blank">Cсылка c несколькими параметрами url</a></li>
+      <li>Список ссылок навигации:<ol>
+        <li><a href="#forms" title="Формы">Перейти к формам</a></li>
+        <li><a href="#start" title="Верхушка страницы">Вернуться наверх</a></li>
+      </ol></li>
+      <li><a name="hrefless">https://www.example.com (Ссылка без href)</a></li>
+      <li><a href="" name="hrefempty">Ссылка с пустым href</a></li>
+      <li><a href="http://ya.ru" rel="nofollow" target="_blank">Ссылка, по которой запрещен переход поисковикам</a></li>
+      <li><a href="http://ya.ru" rel="noindex" target="_blank">Ссылка, которая не индексируется браузером</a></li>
+      <li>Контекстная <a href="https://www.example.com" target="_blank">ссылка</a></li>
+      <li><a href="https://www.example.com" target="_blank"><img src="image.jpg" height="150" alt="Ссылка изображение"></a></li>
+      <li><img src="shapes.JPG" usemap="#shapes" height="100" alt="Изображение">
+        <map name="shapes">
+          <area shape="rect" coords="0,0,100,100" href="https://www.example1.com" alt="Квадрат">
+          <area shape="circle" coords="150,50,50" href="https://www.example2.com" alt="Круг" id="sh">
+        </map></li>
+      <li><a href="page.html">Относительная ссылка на страницу в текущем каталоге</a></li>
+      <li><a href="about/page1.html">Относительная ссылка на страницу в каталоге about</a></li>
+      <li><a href="../page2.html">Относительная ссылка на страницу в каталоге уровнем выше</a></li>
+      <li><a href="../../page3.html">Относительная ссылка на страницу в каталоге, расположенном на два уровня выше</a></li>
+      <li><a href="//main.html">Сокращённая ссылка на главную страницу</a></li>
+      <li><a href="//application.html">Сокращённая ссылка на внутреннюю страницу</a></li>
+    </ol>
+    </div>
+
+    <div id="wrapper">
+
+    <div class="content">
+      <table id="TB">
+        <tr>
+          <th>№</th>
+          <th>Дисциплина</th>
+          <th>Преподаватель</th>
+        </tr>
+        <tr>
+          <td>1</td>
+          <td colspan="2"> &nbsp;Дискретная &nbsp; математика &nbsp; - &nbsp; преподаватель &nbsp; отсутствует</td>
+        </tr>
+        <tr>
+          <td>2</td>
+          <td>Разработка пользовательского WEB интерфейса</td>
+          <td>Синица А. А.</td>
+        </tr>
+        <tr>
+          <td>3</td>
+          <td>Алгоритмы и анализ сложности</td>
+          <td>Миков А. И.</td>
+        </tr>
+        <tr>
+          <td>4</td>
+          <td>Иностранный язык</td>
+          <td>Баклагова Ю. В.</td>
+        </tr>
+        <tr>
+          <td>5</td>
+          <td>Компьютерные сети</td>
+          <td>Лукащик Е. П.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div id="forms">
+        <form action="/" method="POST">
+        
+            <label>
+                Имя:<br />
+                <input name="field-name" class="formContent" placeholder="Ваше имя" />
+            </label><br /><br />
+        
+            <label>
+                Еmail:<br />
+                <input name="field-email" class="formContent" type="email" placeholder="Введите вашу почту" />
+            </label><br /><br />
+        
+            <label>
+                Дата рождения:<br />
+                <input name="field-date" class="formContent" value="2000-01-01" type="date" />
+            </label><br /><br />
+
+            Количество конечностей:<br />
+            <label><input type="radio" checked="checked" name="radio-group" class="formContent" value="Значение1" />4 конечности</label><br />
+            <label><input type="radio" name="radio-group" class="formContent" value="Значение2" />3 конечности</label><br />
+            <label><input type="radio" name="radio-group" class="formContent" value="Значение3" />2 конечности</label><br />
+            <label><input type="radio" name="radio-group" class="formContent" value="Значение4" />1 конечность</label><br />
+            <label><input type="radio" name="radio-group" class="formContent" value="Значение5" />Нет конечностей</label><br />
+            <br />
+            <label>
+                Сверхспособности:<br />
+                <select name="field-name" class="formContent" multiple="multiple">
+                  <option value="Бессмертие"  selected="selected">Бессмертие</option>
+                  <option value="Прохождение сквозь стены">Прохождение сквозь стены</option>
+                  <option value="Левитация">Левитация</option>
+                </select>
+            </label><br /><br />
+
+            <label>
+              Биография:<br />
+              <textarea name="field-name" class="formContent" cols="100" rows="20" placeholder="Напишите вашу биографию"></textarea>
+            </label><br /><br />
+
+            <label><input type="checkbox" checked="checked" name="check" />
+              С контрактом ознакомлен(а)</label><br /><br />
+
+              <input type="submit" value="Отправить" />
+         </form>
+    </div>
+    </div>
+
+    <div id="footer">
+      <div id="FText"><p>Подвал сайта</p></div>
+    </div>
+  </body>
+</html>
