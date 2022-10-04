@@ -1,0 +1,111 @@
+body{
+  font-size: small;
+  margin: 0;
+  padding: 0;
+}
+  ol {
+    list-style: none;
+    counter-reset: li;
+  }
+  li:before {
+    counter-increment: li;
+    content: counters(li, ".") ". ";
+  }
+  .conteiner-fluid{
+    background-color: gray;
+    height: 200px;
+    padding-top: 10px;
+  }
+  #logo{
+    float: left;
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+  }
+  #HText{
+    background-color: rgb(123,192,123);
+    margin: 15px;
+    padding-top: 10px;
+    width: 95%;
+    height: 150px;
+    text-align: center;
+    font-size: xx-large;
+  }
+  a:hover{color: rosybrown;}
+  .menu{
+    color: black; 
+    text-align: center; 
+    vertical-align: middle;
+  }
+  p{
+    padding: 40px;
+  }
+  .menu{
+    color: black; 
+    text-align: center; 
+  }
+  table{
+    border: 1px solid #eee;
+    text-align: center;
+    table-layout: fixed;
+    width: 100%;
+    margin:25px 0 25px 0;
+  }
+  table th {
+    font-weight: bold;
+    padding: 5px;
+    background: #d3d3d3;
+    border: 1px solid #dddddd;
+  }
+  table td{
+    height: 100px;
+    padding: 5px 10px;
+    border: 1px solid #eee;
+  }
+  table tbody tr:nth-child(odd){
+    background: #fff;
+  }
+  table tbody tr:nth-child(even){
+    background: #f3efef;
+  }
+  #forms{
+    max-height: 1000px;
+    overflow-y: scroll;
+
+    background-color:rgb(229, 231, 216); 
+    padding:10px;
+    margin:25px 0 25px 0;
+    text-align: center;
+  }
+  map{
+    display: inline;
+  }
+  .conteiner-fluid1{
+    max-height: 550px;
+    margin: 0px;
+    overflow: visible;
+    text-align: center;
+    background: radial-gradient(at center, rgb(209, 240, 236) 55%, #ffffff 75%);
+  }
+  .content{
+    max-height: 1000px;
+    overflow-y: scroll;
+    background-color:rgb(232, 252, 250); 
+    margin: 20px auto;  
+    text-align: center;
+  }
+  .conteiner-fluid-foot{
+    height: 150px;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-size: x-large;
+    margin-top: 15px;
+  }
+
+  @media only screen and (min-width: 992px) {
+    .conteiner-fluid1{
+      max-width: 60%;
+      margin: 10px 20% 0 20%;;
+    }
+  }
