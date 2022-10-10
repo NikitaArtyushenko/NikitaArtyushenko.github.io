@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html lang="Russian">
+<head>
+    <title>Задание №6</title>
+</head>
+
+<body>
+    <script>
+
+          window.addEventListener('DOMContentLoaded', function (event) {
+
+          console.log("DOM fully loaded and parsed");
+          let s = document.getElementById("mySelect");
+          s[0].addEventListener("change", function(event) {
+
+            let select = event.target;
+            let radios = document.getElementById("radios");
+            let check = document.getElementById("checkbox");
+            console.log(select.value);
+            if (select.value == "2") {
+            radios.style.display = "inherit";
+            }
+            else {
+                if(select.value == "3") {
+                check.style.display ="inherit";
+                }
+            }
+
+          });
+
+          let r = document.querySelectorAll(".radios input[type=radio]");
+          r.forEach(function(radio) {
+            radio.addEventListener("change", function(event) {
+            let r = event.target;
+            console.log(r.value);
+    });    
+    });
+
+        });
+    </script>
+
+
+    <div style="width: 90%; border: 5px solid black; justify-content: center; padding: 15px;">
+        <form style="padding: 10px;" id="form" onsubmit="return false" style="display:block ;">
+            <label> Количество продуктов: <br />
+        <input type="text" id="field_cost" placeholder="Введите количество (шт.)" style="width: 350px;"/></label><br /><br />
+        
+        <label>
+            Виды товаров:<br />
+            <select id="mySelect" >
+              <option value="1">Персональный компьютер</option>
+              <option value="2">Смартфон</option>
+              <option value="3">Планшет</option>
+            </select>
+        </label><br /><br />
+        <div class="radios" id="radios" style="display: none;">
+        <p>Компания производитель: </p>
+        <label><input type="radio" checked="checked" name="radio-group" class="formContent" value="Значение1" />Apple</label><br />
+        <label><input type="radio" name="radio-group" class="formContent" value="Значение2" />Sumsung</label><br /><br />
+        </div>
+        <div id="checkbox" style="display: none;">
+        <label><input type="checkbox" checked="checked" name="check" />
+            Оформить страховку</label><br /><br />
+        </div>
+        <br /><br />
+        <label>Общая стомость <br />
+        <input id="result" style="background-color: white; color: black; width: 350px;" disabled> </label>
+        </form>
+    </div>  
+
+</body>    
+</html>
