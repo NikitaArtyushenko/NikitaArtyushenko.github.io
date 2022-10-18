@@ -6,61 +6,31 @@
 </head>
 
 <body>
-    <script>
-
-          window.addEventListener('DOMContentLoaded', function (event) {
-
-          console.log("DOM fully loaded and parsed");
-          let s = document.getElementById("mySelect");
-          s[0].addEventListener("change", function(event) {
-
-            let select = event.target;
-            let radios = document.getElementById("radios");
-            let check = document.getElementById("checkbox");
-            console.log(select.value);
-            if (select.value == "2") {
-            radios.style.display = "inherit";
-            }
-            else {
-                if(select.value == "3") {
-                check.style.display ="inherit";
-                }
-            }
-
-          });
-
-          let r = document.querySelectorAll(".radios input[type=radio]");
-          r.forEach(function(radio) {
-            radio.addEventListener("change", function(event) {
-            let r = event.target;
-            console.log(r.value);
-    });    
-    });
-
-        });
+    <script src="script.js">
     </script>
 
 
     <div style="width: 90%; border: 5px solid black; justify-content: center; padding: 15px;">
-        <form style="padding: 10px;" id="form" onsubmit="return false" style="display:block ;">
+        <form style="padding: 10px;" id="form" onsubmit="return false" style="display: block;">
             <label> Количество продуктов: <br />
-        <input type="text" id="field_cost" placeholder="Введите количество (шт.)" style="width: 350px;"/></label><br /><br />
+        <input type="text" id="field_amount" placeholder="Введите количество (шт.)" style="width: 350px;"/></label><br /><br />
         
         <label>
             Виды товаров:<br />
-            <select id="mySelect" >
-              <option value="1">Персональный компьютер</option>
-              <option value="2">Смартфон</option>
-              <option value="3">Планшет</option>
+            <select name="mySelect" id="sel">
+              <option value="0" selected="selected">Выберите товар</option>
+              <option value="100000">Персональный компьютер</option>
+              <option value="25000">Смартфон</option>
+              <option value="30000" id="sel">Планшет</option>
             </select>
         </label><br /><br />
         <div class="radios" id="radios" style="display: none;">
         <p>Компания производитель: </p>
-        <label><input type="radio" checked="checked" name="radio-group" class="formContent" value="Значение1" />Apple</label><br />
-        <label><input type="radio" name="radio-group" class="formContent" value="Значение2" />Sumsung</label><br /><br />
+        <label><input type="radio" checked="checked" name="radio-group" class="formContent" value="30000"/>Sumsung</label><br />
+        <label><input type="radio" name="radio-group" class="formContent" value="60000"/>Apple</label><br /><br />
         </div>
-        <div id="checkbox" style="display: none;">
-        <label><input type="checkbox" checked="checked" name="check" />
+        <div id="check" class="check" style="display: none;">
+        <label for="check"><input type="checkbox" id="checkbox" name="checkbox"/>
             Оформить страховку</label><br /><br />
         </div>
         <br /><br />
