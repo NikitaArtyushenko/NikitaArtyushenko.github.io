@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Задание №8</title>
+        <link rel="stylesheet" type="text/css" href="style.css"/>
+        <script src="script.js"></script>
+        <script src="jquery-3.4.1.min.js"></script>
+        <script src="http://code.jquery.com/jquery-2.0.2.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+        <div id="b-popup">
+            <div class="b-popup-content">
+                <button class="popup-link">Открыть</button>
+            </div>
+        </div>
+
+        <div class="popup">
+            <form class="form" method="POST" action="https://api.slapform.com/8e5STvahQ">
+                <label>
+                    Имя:<br />
+                    <input id="name" name="MyName" class="formContent" placeholder="Ваше имя" />
+                </label><br /><br />
+            
+                <label>
+                    Еmail:<br />
+                    <input id="email" name="MyEmail" class="formContent" type="email" placeholder="Введите вашу почту" />
+                </label><br /><br />
+
+                <label>
+                    Сообщение:<br />
+                    <textarea id="message" name="MyMessage" class="formContent" cols="100" rows="20" placeholder="Напишите ваше сообщение"></textarea>
+                  </label><br /><br />
+
+                <label><input type="checkbox" checked="checked" />
+                    С политикой конфиденциальности ознакомлен(а)</label><br /><br />
+
+                    <button>Отправить</button>
+                <button class="popup-close">Закрыть</button>
+            </form>
+        </div>
+        <script>
+            var elements = document.querySelectorAll('input, textarea');
+            for (i = 0; i < elements.length; i++){
+                (function(element){
+                    var id = element.getAttribute("id");
+                    element.value = localStorage.getItem(id);
+                    element.oninput = function(){
+                        localStorage.setItem(id, element.value);
+                    }
+                })(elements[i]);
+            }
+
+            $('.popup-link').click(function() {
+            showPopup();
+            window.history.pushState('popup-open', null, '?/form');
+            $(window).on('popstate', hidePopup);
+            });
+
+            $('.popup-close').click(function() {
+                hidePopup();
+            });
+
+            function hidePopup() {
+                if(history.state == 'popup-open')  {
+                    window.history.back();
+                }
+                $(window).off('popstate', hidePopup);
+                $(".popup").hide();
+            }
+
+            function showPopup() {
+                $(".popup").show();
+            }
+    </script>
+    </body>
+    
+</html>
