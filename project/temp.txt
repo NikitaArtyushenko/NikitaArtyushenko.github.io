@@ -1,0 +1,64 @@
+<section class="quick-tasks">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 quick-tasks-title">
+          <h2>
+            Наши профессиональные разработчики<br>выполняют быстро любые задачи
+          </h2>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-md-4 competency-unit">
+          <div class="text">
+            <div class="competency-pic">
+              <img src="./img/competency-20.svg" alt="Task-1" />
+            </div>
+            <div class="time">от 1ч</div>
+            <div>Настрройка события GA<br>в интернет магазине</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 competency-unit">
+          <div class="text">
+            <div class="competency-pic">
+              <img src="./img/competency-21.svg" alt="Task-2" />
+            </div>
+            <div class="time">от 20ч</div>
+            <div>Разработка мобильной<br>версии сайта</div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4 competency-unit">
+          <div class="text">
+            <div class="competency-pic">
+              <img src="./img/competency-22.svg" alt="Task-3" />
+            </div>
+            <div class="time">от 8ч</div>
+            <div>Интеграция<br>модуля оплаты</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  /* quick tasks with time */
+  
+
+  .quick-tasks {
+    padding-top: 50px;
+  }
+  
+  .quick-tasks .quick-tasks-title {
+    margin-bottom: 55px;
+  }
+  
+  .quick-tasks h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .time {
+    margin: 0 auto;
+    color: #050c33;
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+  }
